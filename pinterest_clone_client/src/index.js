@@ -7,6 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import App from './components/App'
 import { pinsReducer } from './reducers/pinsReducer'
+
 // create a store for redux
 // createStore(reducer, dev tools)
 
@@ -17,7 +18,7 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />,
+        <App />
     </Provider>,
     document.getElementById('root')
 )
