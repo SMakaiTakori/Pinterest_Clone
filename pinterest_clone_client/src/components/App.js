@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../images/pinterest-icon.png'
+import PinsContainer from './PinsContainer'
 
 const App = () => {
 
@@ -9,6 +10,7 @@ const App = () => {
             <h1 style= {{ color: '#E60023', paddingTop:'25px'}}>
                 Clone App
             </h1>
+            <PinsContainer />
         </div>
     )
 
