@@ -10,6 +10,7 @@ const App = () => {
             <h1 style= {{ color: '#E60023', paddingTop:'25px'}}>
                 Clone App
             </h1>
+            <br/>
             <PinsContainer />
         </div>
     )
