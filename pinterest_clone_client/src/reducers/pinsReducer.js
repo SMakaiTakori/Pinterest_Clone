@@ -1,7 +1,7 @@
 export const pinsReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_PINS':
-            return {data: action.payload}
+            return {hits: action.payload}
         default:
                 return state
     }
