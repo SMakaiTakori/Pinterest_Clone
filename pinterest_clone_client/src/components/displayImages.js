@@ -1,11 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-
- const HitsData = () => {
-    debugger;     
-    return this.props.state.map(realData => (                                                   
-        <>
+ const DisplayImages = (props) => {
+     
+    return props.pinsData.map(realData => (                                                   
+        <div key={realData.id}>
         <br/>   
         <br/>
         <a href= '#'><img alt='' src={realData.previewURL} /></a>              
@@ -15,9 +15,15 @@ import React from 'react';
             <br/>    
             Photo Credit: {realData.user}
         </span>
-        </>   
+        </div>   
     ))
 }
 
+const mapStateToProps = state => { 
+    return {
+        pinsData: state.pins
+    }
+}
 
-export default HitsData;
+
+export default connect(mapStateToProps)(DisplayImages);

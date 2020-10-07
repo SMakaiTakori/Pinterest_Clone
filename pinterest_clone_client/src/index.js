@@ -6,13 +6,13 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import App from './components/App'
-import { pinsReducer } from './reducers/pinsReducer'
+import {rootReducer } from './reducers/rootReducer'
 
 // create a store for redux
 // createStore(reducer, dev tools)
 
 const store = createStore(
-    pinsReducer, 
+    rootReducer, 
     composeWithDevTools(applyMiddleware(thunk))
     )
 
