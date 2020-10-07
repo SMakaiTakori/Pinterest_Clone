@@ -27,7 +27,7 @@ const PinsContainer = () => {
                    <br/>                 
                         Likes: {hit.favorites} 
                         <br/>    
-                        Owner: { hit.user}
+                        Owner: {hit.user}
                     </span>
                 </>   
             ))}
