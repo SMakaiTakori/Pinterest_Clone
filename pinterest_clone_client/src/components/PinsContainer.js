@@ -6,9 +6,8 @@ import React, { useState, useEffect } from 'react';
 
 const PinsContainer = () => {
     const [query, setQuery] = useState('');  
-    const [imageData, setImageData] = useState('flowers');
+    const [imageSearch, setImageSearch] = useState('');
     const [pinsData, setPinsData] = useState([]);
-    
     
     useEffect(() => {        
         fetch(`https://pixabay.com/api/?key=18540307-a22579c944a9b0e0dd7d2004b&q=${query}`)
@@ -27,11 +26,10 @@ const PinsContainer = () => {
                    <br/>                 
                         Likes: {hit.favorites} 
                         <br/>    
-                        Owner: {hit.user}
+                        Photo Credit: {hit.user}
                     </span>
                 </>   
             ))}
-
                 
     return(             
         <>
@@ -39,11 +37,11 @@ const PinsContainer = () => {
            <h1>Find your next inspiration!</h1>
            <input 
                 type='text' 
-                onChange= {(e) => setImageData(e.target.value)}
-                value={imageData}
+                onChange= {(e) => setImageSearch(e.target.value)}
+                value={imageSearch}
                 placeholder='Search'
            /> 
-           <button onClick={() => setQuery(imageData)}> Get Images </button>           
+           <button onClick={() => setQuery(imageSearch)}> Get Images </button>           
            {pinsData.length ? < HitsData /> : null}                    
         </div>
         </>

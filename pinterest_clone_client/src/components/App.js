@@ -6,9 +6,9 @@ const App = () => {
 
     return(
         <div>
-            <img alt={logo} src={ logo } style={{ float:'left', width:'100px', height:'100px' }} />
+            <img alt={logo} src={ logo } style={{ float:'left', width:'60px', height:'60px' }} />
             <h1 style= {{ color: '#E60023', paddingTop:'25px'}}>
-                Clone App
+                Clone
             </h1>
             <br/>
             <PinsContainer />
