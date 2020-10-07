@@ -1,8 +1,9 @@
 import React from 'react';
 
 
- const HitsData = () => {  
-      
+
+ const HitsData = () => {
+    debugger;     
     return this.props.state.map(realData => (                                                   
         <>
         <br/>   

@@ -34,7 +34,7 @@ const PinsContainer = ({ fetchPins }) => {
 
 const mapStateToProps = state => { 
     return {
-        data: state.data
+        pinsData: state.pinsData
     }
 }
 
