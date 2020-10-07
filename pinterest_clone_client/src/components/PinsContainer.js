@@ -1,35 +1,38 @@
 import React, { useState, useEffect } from 'react';
 
-// import { connect } from 'react-redux'
-// import { fetchPins } from '../actions/pinsActions'
+import { connect } from 'react-redux'
+import { fetchPins } from '../actions/pinsActions'
 
 
-const PinsContainer = () => {
+const PinsContainer = ({ fetchPins }) => {
     const [query, setQuery] = useState('');  
     const [imageSearch, setImageSearch] = useState('');
     const [pinsData, setPinsData] = useState([]);
     
-    useEffect(() => {        
-        fetch(`https://pixabay.com/api/?key=18540307-a22579c944a9b0e0dd7d2004b&q=${query}`)
-        .then(res => res.json())
-        .then(data => 
-            setPinsData(data.hits));
+    useEffect(() => {   
+        // fetch(`https://pixabay.com/api/?key=18540307-a22579c944a9b0e0dd7d2004b&q=${query}`)
+//         .then(res => res.json())
+//         .then(data => 
+//             setPinsData(data.hits));     
+        fetchPins();
     }, [query]);
 
     const HitsData = () => {               
-            return pinsData.map(hit => (                                                   
-                <>
-                <br/>   
-                <br/>
-                <a href= '#'><img alt='' src={hit.previewURL} /></a>              
-                   <span>
-                   <br/>                 
-                        Likes: {hit.favorites} 
-                        <br/>    
-                        Photo Credit: {hit.user}
-                    </span>
-                </>   
-            ))}
+        return pinsData.map(hit => (                                                   
+            <>
+            <br/>   
+            <br/>
+            <a href= '#'><img alt='' src={hit.previewURL} /></a>              
+            <span>
+                <br/>                 
+                Pins: {hit.favorites} 
+                <br/>    
+                Photo Credit: {hit.user}
+            </span>
+            </>   
+        ))
+    }
+
                 
     return(             
         <>
@@ -48,5 +51,5 @@ const PinsContainer = () => {
     );
 }
 
-export default PinsContainer;
-// export default connect(null, {fetchPins})(PinsContainer);
+// export default PinsContainer;
+export default connect(null, {fetchPins})(PinsContainer);
