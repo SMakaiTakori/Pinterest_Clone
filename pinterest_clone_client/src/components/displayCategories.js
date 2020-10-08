@@ -84,4 +84,11 @@ const DisplayCategories = (props) => {
     )
 }
 
-export default DisplayCategories;
+const mapStateToProps = state => {
+    return {
+        catData: state.catData
+    }
+}
+
+
+export default connect(mapStateToProps)(DisplayCategories);

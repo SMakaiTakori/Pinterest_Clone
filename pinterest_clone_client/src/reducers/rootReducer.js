@@ -4,6 +4,6 @@ import { pinsReducer } from './pinsReducer'
 
 export const rootReducer = combineReducers({
     pins: pinsReducer,
-    categories: categoriesReducer
+    catData: categoriesReducer
 })
 
