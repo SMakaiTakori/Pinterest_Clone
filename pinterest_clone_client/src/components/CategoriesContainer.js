@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-// import { connect } from 'react-redux'
-// import { fetchPins } from '../actions/pinsActions'
+import { connect } from 'react-redux'
+import { fetchCategories } from '../actions/categoriesActions'
 
 
-const CategoriesContainer = () => {
+const CategoriesContainer = ({ fetchCategories, catData }) => {
 
     const [selection, setSelection] = useState('');
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    // })
+    })
 
     return(
         <div>
@@ -24,5 +24,10 @@ const CategoriesContainer = () => {
         </div>
     )
 }
+const mapStateToProps = state => { 
+    return {
+        catData: state.categories
+    }
+}
 
-export default CategoriesContainer;
+export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);
