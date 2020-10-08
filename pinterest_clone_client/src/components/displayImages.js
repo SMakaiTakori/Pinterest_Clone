@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 
  const DisplayImages = (props) => {
      
-    return props.pinsData.map(realData => (                                                   
-        <div key={realData.id}>
+    return props.pinsData.map(data => (                                                   
+        <div key={data.id}>
         <br/>   
         <br/>
-        <a href= '#'><img alt='' src={realData.previewURL} /></a>              
+        <a href= '#'><img alt='' src={data.previewURL} /></a>              
         <span>
             <br/>                 
-            Pins: {realData.favorites} 
+            Pins: {data.favorites} 
             <br/>    
-            Photo Credit: {realData.user}
+            Photo Credit: {data.user}
         </span>
         </div>   
     ))

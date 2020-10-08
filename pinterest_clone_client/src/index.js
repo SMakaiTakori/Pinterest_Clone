@@ -8,8 +8,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App'
 import {rootReducer } from './reducers/rootReducer'
 
-// create a store for redux
-// createStore(reducer, dev tools)
 
 const store = createStore(
     rootReducer, 
