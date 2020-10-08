@@ -10,8 +10,8 @@ const DisplayCategories = (props) => {
                 <input
                     type="radio"
                     name=""
-                    value=""
-                    checked={true}
+                    value=''
+                    checked={ props.selected === 'Yoga Poses' }
                     className="form-check-input"
                 />
                     Yoga Poses
@@ -24,7 +24,7 @@ const DisplayCategories = (props) => {
                     type="radio"
                     name=""
                     value=""
-                    checked={true}
+                    checked={ props.selected === 'Yoga Poses' }
                     className="form-check-input"
                 />
                     Beautiful Architecture
@@ -35,9 +35,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name=""
+                    name="puppies"
                     value=""
-                    checked={true}
+                    checked={ props.selected === 'Puppies' }
                     className="form-check-input"
                 />
                     Puppies
@@ -47,9 +47,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name=""
+                    name="nature"
                     value=""
-                    checked={true}
+                    checked={ props.selected === 'Nature' }
                     className="form-check-input"
                 />
                     Nature
@@ -59,9 +59,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name=""
+                    name="spongebob"
                     value=""
-                    checked={true}
+                    checked={ props.selected === 'Spongebob' }
                     className="form-check-input"
                 />
                     Spongebob
@@ -71,9 +71,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name=""
+                    name="DIY Home Decor"
                     value=""
-                    checked={true}
+                    checked={ props.selected === 'Home Decor' }
                     className="form-check-input"
                 />
                     Home Decor
@@ -90,5 +90,6 @@ const mapStateToProps = state => {
     }
 }
 
+console.log(mapStateToProps)
 
 export default connect(mapStateToProps)(DisplayCategories);
