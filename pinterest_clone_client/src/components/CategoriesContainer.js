@@ -8,7 +8,14 @@ const CategoriesContainer = () => {
     const [selection, setSelection] = useState('');
 
     return(
-        <div>Suggested searches: </div>
+        <div>
+           <h4> 
+               Need suggestions? Select a popular category below to get started!
+           </h4>
+            
+        </div>
     )
 
 }
+
+export default CategoriesContainer;

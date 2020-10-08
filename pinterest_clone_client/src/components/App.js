@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../images/pinterest-icon.png'
 import PinsContainer from './PinsContainer'
+import CategoriesContainer from './CategoriesContainer'
 
 const App = () => {
 
@@ -12,6 +13,8 @@ const App = () => {
             </h1>
             <br/>
             <PinsContainer />
+            <br/>
+            <CategoriesContainer />
         </div>
     )
 
