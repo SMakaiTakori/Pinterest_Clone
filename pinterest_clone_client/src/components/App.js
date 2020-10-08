@@ -12,8 +12,10 @@ const App = () => {
                 Clone
             </h1>
             <br/>
+            <h1>Find your Pinspiration!</h1>
             <PinsContainer />
             <br/>
+            <h4> Need suggestions? Select a popular category below to get started! </h4>
             <CategoriesContainer />
         </div>
     )

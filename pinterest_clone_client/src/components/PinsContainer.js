@@ -10,7 +10,7 @@ const PinsContainer = ({ fetchPins, pinsData }) => {
                 
     return(                   
         <>
-         <h1>Find your Pinspiration!</h1>
+       
         <div>                
            <input 
                 type='text' 

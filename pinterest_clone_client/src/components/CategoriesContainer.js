@@ -1,26 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
+import DisplayCategories from './displayCategories'
 
 
 const CategoriesContainer = ({ fetchCategories, catData }) => {
 
-    const [selection, setSelection] = useState('');
+    const [selected, setSelected] = useState('');
+    const [unselected, setUnselected] = useState('');
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    })
+    // })
 
     return(
         <div>
-           <h4> 
-               Need suggestions? Select a popular category below to get started!
-           </h4>
-           
-
-
-
-        
+           < DisplayCategories />
         </div>
     )
 }
