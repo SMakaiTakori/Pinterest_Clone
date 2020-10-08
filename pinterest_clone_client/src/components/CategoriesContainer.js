@@ -15,7 +15,7 @@ const CategoriesContainer = ({ fetchCategories, catData }) => {
 
     return(
         <div>
-           < DisplayCategories />
+           < DisplayCategories selected={selected} setSelected={setSelected}/>
         </div>
     )
 }

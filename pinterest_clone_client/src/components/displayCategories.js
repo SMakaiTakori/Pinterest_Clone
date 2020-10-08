@@ -2,16 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const DisplayCategories = (props) => {
-
+    console.log('selected', props.selected)
     return(
-        <form>
+        <form onChange ={(e) => props.setSelected(e.target.value)}>
             <div className="form-check">
                 <label>
                 <input
                     type="radio"
-                    name=""
-                    value=''
-                    checked={ props.selected === 'Yoga Poses' }
+                    value= {props.catData.name}
+                    // checked={ }
+                    
                     className="form-check-input"
                 />
                     Yoga Poses
@@ -85,11 +85,12 @@ const DisplayCategories = (props) => {
 }
 
 const mapStateToProps = state => {
+    
     return {
         catData: state.catData
     }
+    
 }
 
-console.log(mapStateToProps)
 
 export default connect(mapStateToProps)(DisplayCategories);
