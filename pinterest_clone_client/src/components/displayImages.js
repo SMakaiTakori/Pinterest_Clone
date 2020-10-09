@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import CategoriesContainer from '../components/CategoriesContainer'
 
 
  const DisplayImages = (props) => {
@@ -9,11 +8,10 @@ import { connect } from 'react-redux';
         <div key={data.id}>
         <br/>   
         <br/>
-        
         <a href= '#'><img alt='' src={data.previewURL} /></a>              
         <span>
             <br/>                 
-            Pins: {data.favorites} 
+            Number of Pins: {data.favorites} 
             <br/>    
             Photo Credit: {data.user}
         </span>

@@ -1,10 +1,8 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { categoriesReducer } from '../reducers/categoriesReducer';
+
 
 const DisplayCategories = ({ catData, selected, setSelected }) => {
 
-    console.log('selected', selected)
     return(
         <div>
             {catData.map((cat) => (

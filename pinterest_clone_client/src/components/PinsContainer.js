@@ -7,6 +7,7 @@ import { fetchPins } from '../actions/pinsActions'
 const PinsContainer = ({ selected, fetchPins, pinsData }) => {
 
     const [query, setQuery] = useState('');  
+    const [favorite, setFavorite] = useState([]);
 
     useEffect(() => {
         if (selected) {
@@ -16,7 +17,6 @@ const PinsContainer = ({ selected, fetchPins, pinsData }) => {
                 
     return(                   
         <>
-       
         <div>                
            <input 
                 type='text' 
@@ -25,7 +25,8 @@ const PinsContainer = ({ selected, fetchPins, pinsData }) => {
                 placeholder='Search'
            /> 
            <button onClick={() => fetchPins(query)}> Get Images </button>      
-           {pinsData.length ? < DisplayImages /> : null}                    
+           {pinsData.length ? < DisplayImages /> : null}       
+
         </div>
         </>
     );
