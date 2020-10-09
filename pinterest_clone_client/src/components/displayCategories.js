@@ -2,16 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const DisplayCategories = (props) => {
+
+    const handleChange = (changeEvent) => {
+        props.setSelected(changeEvent.target.value)
+    }
+
+  
+      
+
     console.log('selected', props.selected)
     return(
-        <form onChange ={(e) => props.setSelected(e.target.value)}>
+        <form >
             <div className="form-check">
                 <label>
                 <input
                     type="radio"
-                    value= {props.catData.name}
-                    // checked={ }
-                    
+                    value= "yoga poses"
+                    checked={ props.selected === 'Yoga Poses' }
+                    onChange={ handleChange}                  
                     className="form-check-input"
                 />
                     Yoga Poses
@@ -22,9 +30,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name=""
-                    value=""
-                    checked={ props.selected === 'Yoga Poses' }
+                    value="Beautiful Architecture"
+                    checked={ props.selected === 'Beautiful Architecture' }
+                    onChange={ handleChange}
                     className="form-check-input"
                 />
                     Beautiful Architecture
@@ -35,9 +43,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name="puppies"
-                    value=""
+                    value="Puppies"
                     checked={ props.selected === 'Puppies' }
+                    onChange={ handleChange}
                     className="form-check-input"
                 />
                     Puppies
@@ -47,9 +55,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name="nature"
-                    value=""
+                    value="Nature"
                     checked={ props.selected === 'Nature' }
+                    onChange={ handleChange}
                     className="form-check-input"
                 />
                     Nature
@@ -59,9 +67,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name="spongebob"
-                    value=""
+                    value="Spongebob"
                     checked={ props.selected === 'Spongebob' }
+                    onChange={ handleChange}
                     className="form-check-input"
                 />
                     Spongebob
@@ -71,9 +79,9 @@ const DisplayCategories = (props) => {
                 <label>
                 <input
                     type="radio"
-                    name="DIY Home Decor"
-                    value=""
+                    value="DIY Home Decor"
                     checked={ props.selected === 'Home Decor' }
+                    onChange={ handleChange}
                     className="form-check-input"
                 />
                     Home Decor
@@ -87,7 +95,7 @@ const DisplayCategories = (props) => {
 const mapStateToProps = state => {
     
     return {
-        catData: state.catData
+        catData: state.categories
     }
     
 }

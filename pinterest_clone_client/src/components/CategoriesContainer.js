@@ -21,7 +21,7 @@ const CategoriesContainer = ({ fetchCategories, catData }) => {
 }
 const mapStateToProps = state => { 
     return {
-        catData: state.categories
+        catData: state.catData
     }
 }
 
