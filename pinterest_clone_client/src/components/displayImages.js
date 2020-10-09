@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPins } from '../actions/pinsActions';
+
 
 
  const DisplayImages = (props) => {

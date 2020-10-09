@@ -1,26 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 
-const DisplayFavorites = (favorite) => {
-
+const DisplayFavorites = ({favorite}) => {
+debugger;
     
-    return(
+    return favorite.map(fav => (
+        
         <div>
-            <h1>My Favorites</h1> 
-            {/* if (favorite.length){
-                // favorite.map(favs=> (
-                //   <img src={favs.previewURL}>
-                  
-                  
-                //   </img>  
-                )
+            <h1>Your Favorites</h1>
+            <img
+            src={fav}
+            alt= ""
+            />
 
-                )
-            } */}
         </div>
-    )
+        
+        ))
 }
-
+        
 export default DisplayFavorites;
 
 //create onClick for Images 

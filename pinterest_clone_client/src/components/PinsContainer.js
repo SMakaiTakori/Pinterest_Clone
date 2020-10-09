@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DisplayImages from './displayImages'
 import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
+import DisplayFavorites from './displayFavorites';
 
 
 const PinsContainer = ({ selected, fetchPins, pinsData}) => {
@@ -26,7 +27,7 @@ const PinsContainer = ({ selected, fetchPins, pinsData}) => {
            <button onClick={() => fetchPins(query)}> Get Images </button>      
            {/* {pinsData.length ? < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  /> : null}        */}
            < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  />
-
+           { favorite.length ? < DisplayFavorites pinsData={pinsData} favorite={favorite} setFavorite={setFavorite} /> : null }
         </div>
         </>
     );

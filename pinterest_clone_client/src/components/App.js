@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../images/pinterest-icon.png'
 import PinsContainer from './PinsContainer'
 import CategoriesContainer from './CategoriesContainer'
-import DisplayFavorites from './displayFavorites';
+// import DisplayFavorites from './displayFavorites';
 
 const App = () => {
 
@@ -21,7 +21,6 @@ const App = () => {
             <br/>
             <h4> Need suggestions? Select a popular category below to get started! </h4>
             <CategoriesContainer selected={selected} setSelected={setSelected}/>
-            {/* <DisplayFavorites favorite={favorite} setFavorite={setFavorite} /> */}
         </div>
     )
 }
