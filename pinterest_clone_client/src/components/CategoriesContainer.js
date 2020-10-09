@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import DisplayCategories from './displayCategories'
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
-import DisplayCategories from './displayCategories'
+
 
 
 const CategoriesContainer = ({ fetchCategories, catData }) => {
@@ -22,6 +23,7 @@ const CategoriesContainer = ({ fetchCategories, catData }) => {
         </div>
     )
 }
+
 const mapStateToProps = state => { 
     return {
         catData: state.categories

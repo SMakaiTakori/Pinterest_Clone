@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DisplayImages from '../components/displayImages'
+import DisplayImages from './displayImages'
 import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
 
