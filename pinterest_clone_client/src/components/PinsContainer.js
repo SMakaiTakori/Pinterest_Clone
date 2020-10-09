@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
 
 
-const PinsContainer = ({ selected, fetchPins, pinsData }) => {
+const PinsContainer = ({ selected, fetchPins, pinsData, favorite, setFavorite }) => {
 
     const [query, setQuery] = useState('');  
-    const [favorite, setFavorite] = useState([]);
+    
 
     useEffect(() => {
         if (selected) {
@@ -25,7 +25,7 @@ const PinsContainer = ({ selected, fetchPins, pinsData }) => {
                 placeholder='Search'
            /> 
            <button onClick={() => fetchPins(query)}> Get Images </button>      
-           {pinsData.length ? < DisplayImages /> : null}       
+           {pinsData.length ? < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  /> : null}       
 
         </div>
         </>

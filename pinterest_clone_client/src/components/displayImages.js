@@ -3,15 +3,23 @@ import { connect } from 'react-redux';
 
 
  const DisplayImages = (props) => {
-     
+     console.log('favs', props.favorite)
+     debugger;
+
     return props.pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
         <br/>
-        <a href= '#'><img alt='' src={data.previewURL} /></a>              
+        <a href= '#'>
+            <img alt='' 
+            src={data.previewURL} 
+            onClick={ (e) => props.setFavorite( e.target.src)}
+            // value={props.favorite}
+            />
+        </a>              
         <span>
             <br/>                 
-            Number of Pins: {data.favorites} 
+            Number of Favorites: {data.favorites} 
             <br/>    
             Photo Credit: {data.user}
         </span>
