@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import DisplayCategories from './displayCategories'
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'

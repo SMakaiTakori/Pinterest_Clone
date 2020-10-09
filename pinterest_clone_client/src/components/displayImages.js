@@ -1,22 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchPins } from '../actions/pinsActions';
 
 
  const DisplayImages = (props) => {
      console.log('favs', props.favorite)
-     debugger;
+    //  debugger;
 
     return props.pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
         <br/>
-        <a href= '#'>
+      
             <img alt='' 
             src={data.previewURL} 
-            onClick={ (e) => props.setFavorite( e.target.src)}
-            // value={props.favorite}
+            onClick={ (e) => props.setFavorite([...props.favorite, e.target.src])}
             />
-        </a>              
+                
         <span>
             <br/>                 
             Number of Favorites: {data.favorites} 

@@ -7,7 +7,7 @@ import DisplayFavorites from './displayFavorites';
 const App = () => {
 
     const [selected, setSelected] = useState('');
-    const [favorite, setFavorite] = useState([]);
+    
 
     return(
         <div>
@@ -17,7 +17,7 @@ const App = () => {
             </h1>
             <br/>
             <h1>Find your Pinspiration!</h1>
-            <PinsContainer selected={selected} favorite={favorite} setFavorite={setFavorite} />
+            <PinsContainer selected={selected} />
             <br/>
             <h4> Need suggestions? Select a popular category below to get started! </h4>
             <CategoriesContainer selected={selected} setSelected={setSelected}/>
