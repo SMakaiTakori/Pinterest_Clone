@@ -7,15 +7,18 @@ import DisplayCategories from './displayCategories'
 const CategoriesContainer = ({ fetchCategories, catData }) => {
 
     const [selected, setSelected] = useState('');
-    // const [unselected, setUnselected] = useState('');
 
-    // useEffect(() => {
-
-    // })
+    useEffect(() => {
+        fetchCategories();
+      }, [fetchCategories]);
 
     return(
         <div>
-           < DisplayCategories selected={selected} setSelected={setSelected}/>
+           < DisplayCategories 
+           selected={selected} 
+           setSelected={setSelected} 
+           catData={catData}
+           />
         </div>
     )
 }

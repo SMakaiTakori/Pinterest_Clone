@@ -1,104 +1,34 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
+// import { categoriesReducer } from '../reducers/categoriesReducer';
 
-const DisplayCategories = (props) => {
+const DisplayCategories = ({ catData, selected, setSelected }) => {
 
-    const handleChange = (changeEvent) => {
-        props.setSelected(changeEvent.target.value)
-    }
+    // const handleChange = (changeEvent) => {
+    //     props.setSelected(changeEvent.target.value)
+    // }
 
-  
-      
-
-    console.log('selected', props.selected)
+    console.log('selected', selected)
     return(
-        <form >
-            <div className="form-check">
+        <div>
+            {catData.map((cat) => (
+                <div className="form-check" key={cat.id}>
                 <label>
                 <input
                     type="radio"
-                    value= "yoga poses"
-                    checked={ props.selected === 'Yoga Poses' }
-                    onChange={ handleChange}                  
+                    value= {cat.name}
+                    checked={ selected === cat.name }
+                    onChange={(e) => setSelected(e.target.value)}                  
                     className="form-check-input"
                 />
-                    Yoga Poses
+                    {cat.name}
                 </label>
-            </div> 
-    
-            <div className="form-check">
-                <label>
-                <input
-                    type="radio"
-                    value="Beautiful Architecture"
-                    checked={ props.selected === 'Beautiful Architecture' }
-                    onChange={ handleChange}
-                    className="form-check-input"
-                />
-                    Beautiful Architecture
-                </label>
-            </div> 
-          
-            <div className="form-check">
-                <label>
-                <input
-                    type="radio"
-                    value="Puppies"
-                    checked={ props.selected === 'Puppies' }
-                    onChange={ handleChange}
-                    className="form-check-input"
-                />
-                    Puppies
-                </label>
-            </div> 
-            <div className="form-check">
-                <label>
-                <input
-                    type="radio"
-                    value="Nature"
-                    checked={ props.selected === 'Nature' }
-                    onChange={ handleChange}
-                    className="form-check-input"
-                />
-                    Nature
-                </label>
-            </div> 
-            <div className="form-check">
-                <label>
-                <input
-                    type="radio"
-                    value="Spongebob"
-                    checked={ props.selected === 'Spongebob' }
-                    onChange={ handleChange}
-                    className="form-check-input"
-                />
-                    Spongebob
-                </label>
-            </div> 
-            <div className="form-check">
-                <label>
-                <input
-                    type="radio"
-                    value="DIY Home Decor"
-                    checked={ props.selected === 'Home Decor' }
-                    onChange={ handleChange}
-                    className="form-check-input"
-                />
-                    Home Decor
-                </label>
-            </div>                
-        </form>
-
+                </div> 
+            ))}
+        </div>
     )
 }
 
-const mapStateToProps = state => {
-    
-    return {
-        catData: state.categories
-    }
-    
-}
 
 
-export default connect(mapStateToProps)(DisplayCategories);
+export default DisplayCategories;
