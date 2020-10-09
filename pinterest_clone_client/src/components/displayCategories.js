@@ -4,11 +4,7 @@ import React from 'react';
 
 const DisplayCategories = ({ catData, selected, setSelected }) => {
 
-    // const handleChange = (changeEvent) => {
-    //     props.setSelected(changeEvent.target.value)
-    // }
-
-    console.log('catData', catData)
+    console.log('selected', selected)
     return(
         <div>
             {catData.map((cat) => (

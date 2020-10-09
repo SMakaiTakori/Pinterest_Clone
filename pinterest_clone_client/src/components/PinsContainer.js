@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DisplayImages from './displayImages'
 import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
 
 
-const PinsContainer = ({ fetchPins, pinsData }) => {
+const PinsContainer = ({ selected, fetchPins, pinsData }) => {
 
     const [query, setQuery] = useState('');  
+
+    useEffect(() => {
+        if (selected) {
+            fetchPins(selected);
+        }
+    })
                 
     return(                   
         <>

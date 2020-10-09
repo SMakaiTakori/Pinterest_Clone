@@ -4,10 +4,7 @@ import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
 
 
-
-const CategoriesContainer = ({ fetchCategories, catData }) => {
-
-    const [selected, setSelected] = useState('');
+const CategoriesContainer = ({ fetchCategories, catData, selected, setSelected }) => {
 
     useEffect(() => {
         fetchCategories();
