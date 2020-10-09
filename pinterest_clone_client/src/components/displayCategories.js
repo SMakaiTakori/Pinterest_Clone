@@ -8,7 +8,7 @@ const DisplayCategories = ({ catData, selected, setSelected }) => {
     //     props.setSelected(changeEvent.target.value)
     // }
 
-    console.log('selected', selected)
+    console.log('catData', catData)
     return(
         <div>
             {catData.map((cat) => (
