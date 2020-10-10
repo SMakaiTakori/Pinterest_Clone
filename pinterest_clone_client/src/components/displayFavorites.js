@@ -5,7 +5,7 @@ const DisplayFavorites = ({ favorite }) => {
 
     return (
         <div>
-            <h1>Your Favorites</h1>
+            <h1 >Your Pins</h1>
           { favorite.map((fav) => (
             <ul>
             <img

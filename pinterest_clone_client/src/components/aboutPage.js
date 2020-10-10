@@ -1,0 +1,22 @@
+import React from 'React';
+
+
+
+const AboutPage = () => {
+    
+    return(
+          
+        <div>
+           <p> 
+               This is app is a Pinterest clone, created using a Rails backend and the Pixabay external API. 
+               You can search for anything your heart desires, then press the 'Get Images' button and your 
+               images will appear. If you are having trouble deciding what to search for, just select one of 
+               the popular categories below the search option and voila! Click on the images that you want to
+               pin as your favorites! You can then view your pins by clicking the 'My Pins' link in the 
+               navigation bar. Happy Searching!                
+           </p>
+        </div>
+    )
+}
+
+export default AboutPage;

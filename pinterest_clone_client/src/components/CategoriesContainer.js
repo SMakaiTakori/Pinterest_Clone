@@ -8,7 +8,6 @@ import DisplayImages from './displayImages'
 const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorite, setFavorite }) => {
 
     useEffect(() => {
-
         fetchCategories();
             if (selected) {
             fetchPins(selected)}

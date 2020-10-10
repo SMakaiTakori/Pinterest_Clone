@@ -7,9 +7,7 @@ import DisplayFavorites from './displayFavorites';
 
 const PinsContainer = ({ selected, fetchPins, favorite, setFavorite }) => {
 
-    const [query, setQuery] = useState(''); 
-    // const [favorite, setFavorite] = useState([]); 
-  
+    const [query, setQuery] = useState('');   
 
     useEffect(() => {
         if (selected) {
@@ -26,7 +24,6 @@ const PinsContainer = ({ selected, fetchPins, favorite, setFavorite }) => {
                 placeholder='Search'
            /> 
            <button onClick={() => fetchPins(query)}> Get Images </button>      
-           
            { favorite.length ? < DisplayFavorites favorite={favorite} setFavorite={setFavorite} /> : null }
         </div>
         </>

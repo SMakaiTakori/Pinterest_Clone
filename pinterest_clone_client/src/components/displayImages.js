@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 
  const DisplayImages = ({favorite, setFavorite, pinsData}) => {
-    // debugger;
+   
     return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
@@ -24,11 +23,5 @@ import { connect } from 'react-redux';
     ))
 }
 
-const mapStateToProps = state => { 
-    return {
-        pinsData: state.pins
-    }
-}
 
-
-export default connect(mapStateToProps)(DisplayImages);
+export default DisplayImages;
