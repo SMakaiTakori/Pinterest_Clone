@@ -1,25 +1,23 @@
 import React from 'react';
 
 
-const DisplayFavorites = ({favorite}) => {
-debugger;
-    
-    return favorite.map(fav => (
-        
+const DisplayFavorites = ({ favorite }) => {
+
+    return (
         <div>
             <h1>Your Favorites</h1>
+          { favorite.map((fav) => (
+            <ul>
             <img
             src={fav}
             alt= ""
             />
-
+            </ul>
+          ))}
         </div>
-        
-        ))
+    )
 }
         
 export default DisplayFavorites;
 
-//create onClick for Images 
-//onClick will setFavorite to favorite array
-//Display favorites (when they click my favorites in nav)
+

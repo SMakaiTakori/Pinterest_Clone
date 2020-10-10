@@ -2,19 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 
-
- const DisplayImages = (props) => {
-     console.log('favs', props.favorite)
-    //  debugger;
-
-    return props.pinsData.map(data => (                                                   
+ const DisplayImages = ({favorite, setFavorite, pinsData}) => {
+    // debugger;
+    return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
         <br/>
       
             <img alt='' 
             src={data.previewURL} 
-            onClick={ (e) => props.setFavorite([...props.favorite, e.target.src])}
+            onClick={ (e) => setFavorite([...favorite, e.target.src])}
             />
                 
         <span>
