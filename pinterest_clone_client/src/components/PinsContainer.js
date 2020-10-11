@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import DisplayImages from './displayImages'
 import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
-import DisplayFavorites from './displayFavorites';
+import DisplayFavorites from './DisplayFavorites';
 
 
 const PinsContainer = ({ selected, fetchPins, favorite, setFavorite }) => {

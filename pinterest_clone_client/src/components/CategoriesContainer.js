@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import DisplayCategories from './displayCategories'
+import DisplayCategories from './DisplayCategories'
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
 import { fetchPins } from '../actions/pinsActions'
-import DisplayImages from './displayImages'
+import DisplayImages from './DisplayImages'
 
 const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorite, setFavorite }) => {
 
