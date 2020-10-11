@@ -1,8 +1,14 @@
 import React from 'react';
 
 
+
  const DisplayImages = ({favorite, setFavorite, pinsData}) => {
-   
+//    debugger;
+    const handleClick = (e) => {
+        setFavorite([...favorite, e.target.src])
+        alert('You saved your pin!')
+    }
+
     return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
@@ -10,7 +16,7 @@ import React from 'react';
       
             <img alt='' 
             src={data.previewURL} 
-            onClick={ (e) => setFavorite([...favorite, e.target.src])}
+            onClick={ (e) => handleClick(e) }
             />
                 
         <span>
@@ -19,7 +25,9 @@ import React from 'react';
             <br/>    
             Photo Credit: {data.user}
         </span>
+        
         </div>   
+        
     ))
 }
 

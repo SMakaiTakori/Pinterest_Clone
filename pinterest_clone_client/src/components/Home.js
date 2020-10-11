@@ -3,7 +3,6 @@ import PinsContainer from './PinsContainer';
 import CategoriesContainer from './CategoriesContainer';
 
 
-
 const Home = () => {
 
     const [selected, setSelected] = useState('');
@@ -12,7 +11,7 @@ const Home = () => {
 
     return(
         <div>
-            <h1 >Find your Pinspiration!</h1>
+            <h1>Find your Pinspiration!</h1>
             <PinsContainer favorite={favorite} setFavorite={setFavorite} selected={selected} />
             <br/>
             <h4 style= {{ color: '#E60023', paddingTop:'25px'}}> Need suggestions? Select a popular category below to get started! </h4>

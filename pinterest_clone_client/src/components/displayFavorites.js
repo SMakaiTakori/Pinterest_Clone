@@ -2,10 +2,13 @@ import React from 'react';
 
 
 const DisplayFavorites = ({ favorite }) => {
+// debugger;
+
 
     return (
         <div>
-            <h1 >Your Pins</h1>
+         
+            <h1>Your Pins</h1>
           { favorite.map((fav) => (
             <ul>
             <img
@@ -15,6 +18,7 @@ const DisplayFavorites = ({ favorite }) => {
             </ul>
           ))}
         </div>
+        
     )
 }
         

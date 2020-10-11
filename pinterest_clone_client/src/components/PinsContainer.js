@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import DisplayImages from './displayImages'
+
 import { connect } from 'react-redux'
 import { fetchPins } from '../actions/pinsActions'
 import DisplayFavorites from './DisplayFavorites';
+
+// import { Route, Switch } from 'react-router-dom'
+;
 
 
 const PinsContainer = ({ selected, fetchPins, favorite, setFavorite }) => {
@@ -23,14 +26,14 @@ const PinsContainer = ({ selected, fetchPins, favorite, setFavorite }) => {
                 value={query}
                 placeholder='Search'
            /> 
-           <button onClick={() => fetchPins(query)}> Get Images </button>      
+           <button onClick={() => fetchPins(query)}> Get Images </button>  
            { favorite.length ? < DisplayFavorites favorite={favorite} setFavorite={setFavorite} /> : null }
         </div>
         </>
-    );
+    )
 }
 
-const mapStateToProps = state => { 
+const mapStateToProps = state => {
     return {
         pinsData: state.pins
     }

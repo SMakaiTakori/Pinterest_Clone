@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
 import { fetchPins } from '../actions/pinsActions'
 import DisplayImages from './DisplayImages'
+import { Route, Switch } from 'react-router-dom'
+import DisplayFavorites from './DisplayFavorites'
+
 
 const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorite, setFavorite }) => {
 
@@ -21,6 +24,11 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
            catData={catData}
            />
            < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  />
+          
+           {/* <Switch>
+               <Route exact path='/pins' render={ () => <DisplayFavorites favorite={favorite} setFavorite={setFavorite} />} />
+            </Switch>
+            */}
         </div>
     )
 }
