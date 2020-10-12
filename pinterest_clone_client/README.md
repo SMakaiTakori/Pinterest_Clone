@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to my Pinterest Clone App!
 
-## Available Scripts
+This is my Pinterest Clone App made with Ruby on Rails and React/Redux that allows users search for images that they would like to view, I used the Pixabay API to fetch images for this app.
 
-In the project directory, you can run:
+In order to use this app, clone it, run "bundle install" and "rails db:seed" to install the dependencies and seed the categories, then run the rails server in your terminal before going into the client side and running "npm start" to start the frontend server. 
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can search for anything your heart desires, then press the 'Get Images' button and your images will appear. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If you are having trouble deciding what to search for, just select one of the popular categories below the search option and voila! 
 
-### `npm test`
+Click on the images that you want to pin as your favorites! You will then see your favorites appear in their own section on the page. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Happy Searching!        
 
-### `npm run build`
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/SMakaiTakori/Pinterest_Clone_ReactApp.git
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## License
+The gems and other dependencies used in this app are available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Copyright (c) 2020 S. Makai Takori
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is app is a Pinterest clone, created using a Rails backend and the Pixabay external API. 
