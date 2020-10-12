@@ -4,10 +4,9 @@ import CategoriesContainer from './CategoriesContainer';
 
 
 const Home = () => {
-
+    
     const [selected, setSelected] = useState('');
     const [favorite, setFavorite] = useState([]); 
-   
 
     return(
         <div>

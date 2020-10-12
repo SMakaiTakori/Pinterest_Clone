@@ -1,13 +1,11 @@
-// import React from 'react';
 import React, { useState } from 'react'
-import NavBar from './NavBar'
 import { Route, Switch } from 'react-router-dom'
 
-import CategoriesContainer from './CategoriesContainer';
 import DisplayFavorites from './DisplayFavorites';
 import AboutPage from './AboutPage';
+import DevAbout from './DevAbout'
 import Home from './Home'
-
+import NavBar from './NavBar'
 
 
 const App = () => {
@@ -16,12 +14,11 @@ const App = () => {
     return(
         <>        
             <NavBar />
-            
             <Switch>
-            
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={AboutPage} />
-                <Route exact path='/pins' render= {() => < DisplayFavorites favorite={favorite} setFavorite={setFavorite} />} />
+                <Route exact path='/about2' component={DevAbout} />
+                {/* <Route exact path='/pins' render= {() => < DisplayFavorites favorite={favorite} setFavorite={setFavorite} />} /> */}
             </Switch>
             
         </>

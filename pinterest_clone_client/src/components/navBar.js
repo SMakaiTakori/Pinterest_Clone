@@ -11,8 +11,9 @@ const NavBar = () => {
             <img alt={logo} src={ logo } style={{ float:'left', width:'60px', height:'60px',  paddingTop:'10px' }} />
             <h1 style= {{ color: '#E60023'}}> 
                 Clone        
-                <li><NavLink exact to= '/pins'> My Pins  </NavLink></li>
-                <li><NavLink exact to= '/about'> About   </NavLink></li>
+                {/* <li><NavLink exact to= '/pins'> My Pins  </NavLink></li> */}
+                <li><NavLink exact to= '/about2'> About the Dev </NavLink></li>
+                <li><NavLink exact to= '/about'> App About  </NavLink></li>
                 <li><NavLink exact to= '/'> Home   </NavLink></li>      
             </h1>
             </ul>

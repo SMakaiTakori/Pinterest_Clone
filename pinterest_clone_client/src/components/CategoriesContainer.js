@@ -25,10 +25,6 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
            catData={catData}
            />
            < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  />
-           
-           
-           
-           
         </div>
     )
 }
