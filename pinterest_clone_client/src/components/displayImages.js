@@ -1,11 +1,14 @@
 import React from 'react';
+import { addFavorites } from '../actions/favoritesActions';
 
 
 
- const DisplayImages = ({favorite, setFavorite, pinsData}) => {
+
+ const DisplayImages = ({favorites, imgSrc, setImgSrc, pinsData}) => {
 //    debugger;
     const handleClick = (e) => {
-        setFavorite([...favorite, e.target.src])
+        setImgSrc([...favorites, e.target.src])
+        {addFavorites(favorites)}
         alert('You saved your pin!')
     }
 
@@ -13,7 +16,6 @@ import React from 'react';
         <div key={data.id}>
         <br/>   
         <br/>
-      
             <img alt='' 
             src={data.previewURL} 
             onClick={ (e) => handleClick(e) }
@@ -21,7 +23,7 @@ import React from 'react';
                 
         <span>
             <br/>                 
-            Number of Favorites: {data.favorites} 
+            Likes: {data.favorites} 
             <br/>    
             Photo Credit: {data.user}
         </span>

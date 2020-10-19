@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DisplayFavorites = ({ favorite }) => {
+const DisplayFavorites = ({ favorites }) => {
 // debugger;
 
 
@@ -9,7 +9,7 @@ const DisplayFavorites = ({ favorite }) => {
         <div>
          
             <h1>Your Pins</h1>
-          { favorite.map((fav) => (
+          { favorites.map((fav) => (
             <ul>
             <img
             src={fav}

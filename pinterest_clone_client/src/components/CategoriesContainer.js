@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import DisplayCategories from './DisplayCategories'
 import DisplayImages from './DisplayImages'
 import DisplayFavorites from './DisplayFavorites'
@@ -6,9 +6,13 @@ import DisplayFavorites from './DisplayFavorites'
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
 import { fetchPins } from '../actions/pinsActions'
+import { addFavorites  } from '../actions/favoritesActions'
 
 
-const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorite, setFavorite }) => {
+const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorites, addFavorites}) => {
+
+    const [imgSrc, setImgSrc] = useState([]); 
+
 
     useEffect(() => {
         fetchCategories();
@@ -18,13 +22,14 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
 
     return(
         <div>
-           { favorite.length ? < DisplayFavorites favorite={favorite} setFavorite={setFavorite} /> : null }
+           {/* { favorites.length ? < DisplayFavorites favorites={favorites}  /> : null } */}
+           < DisplayFavorites favorites={favorites}  />
            < DisplayCategories 
            selected={selected} 
            setSelected={setSelected} 
            catData={catData}
            />
-           < DisplayImages pinsData={pinsData} favorite={favorite} setFavorite={setFavorite}  />
+           < DisplayImages addFavorites={addFavorites} pinsData={pinsData} favorites={favorites} imgSrc={imgSrc} setImgSrc={setImgSrc}   />
         </div>
     )
 }
@@ -32,8 +37,9 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
 const mapStateToProps = state => { 
     return {
         catData: state.categories,
-        pinsData: state.pins
+        pinsData: state.pins,
+     
     }
 }
 
-export default connect(mapStateToProps, { fetchCategories, fetchPins })(CategoriesContainer);
+export default connect(mapStateToProps, { fetchCategories, fetchPins, addFavorites })(CategoriesContainer);

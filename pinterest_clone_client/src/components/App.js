@@ -9,7 +9,7 @@ import NavBar from './NavBar'
 
 
 const App = () => {
-    const [favorite, setFavorite] = useState([]); 
+    
 
     return(
         <>        
