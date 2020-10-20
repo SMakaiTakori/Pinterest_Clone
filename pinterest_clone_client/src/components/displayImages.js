@@ -21,7 +21,7 @@ import React from 'react';
                 
         <span>
             <br/>                 
-            Number of Favorites: {data.favorites} 
+            Likes: {data.favorites} 
             <br/>    
             Photo Credit: {data.user}
         </span>

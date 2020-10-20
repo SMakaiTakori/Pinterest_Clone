@@ -2,8 +2,6 @@ import React from 'react';
 
 
 const DisplayFavorites = ({ favorite }) => {
-// debugger;
-
 
     return (
         <div>
@@ -17,8 +15,7 @@ const DisplayFavorites = ({ favorite }) => {
             />
             </ul>
           ))}
-        </div>
-        
+        </div>     
     )
 }
         
