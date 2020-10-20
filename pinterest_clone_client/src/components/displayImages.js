@@ -14,7 +14,7 @@ import { addFavorites } from '../actions/favoritesActions';
         setImgSrc([...imgSrc, source])
         addFavorites(source)
         
-        // alert(e.target.src)
+        alert('You saved your favorite!')
         
     }
 
