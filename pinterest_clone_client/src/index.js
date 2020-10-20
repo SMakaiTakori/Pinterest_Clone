@@ -15,8 +15,6 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(thunk))
     )
 
-// store.dispatch({ type: 'SET_FAVORITES' });
-
 
 ReactDOM.render(
     <Provider store={store}>

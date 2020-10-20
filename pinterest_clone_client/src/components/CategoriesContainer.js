@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom'
 import DisplayCategories from './DisplayCategories'
 import DisplayImages from './DisplayImages'
 import DisplayFavorites from './DisplayFavorites'
@@ -23,7 +24,7 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
     return(
         <div>
            {/* { favorites.length ? < DisplayFavorites favorites={favorites}  /> : null } */}
-           < DisplayFavorites favorites={favorites}  />
+       
            < DisplayCategories 
            selected={selected} 
            setSelected={setSelected} 

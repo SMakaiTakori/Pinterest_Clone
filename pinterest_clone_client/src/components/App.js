@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux';
 
 import DisplayFavorites from './DisplayFavorites';
 import AboutPage from './AboutPage';
@@ -8,7 +9,7 @@ import Home from './Home'
 import NavBar from './NavBar'
 
 
-const App = () => {
+const App = ({ favorites }) => {
     
 
     return(
@@ -17,12 +18,17 @@ const App = () => {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about-app' component={AboutPage} />
-                <Route exact path='/about-dev' component={DevAbout} />
-                {/* <Route exact path='/pins' render= {() => < DisplayFavorites favorite={favorite} setFavorite={setFavorite} />} /> */}
+                <Route exact path='/about-dev' component={DevAbout} />              
+                <Route exact path='/pins' render={() => <DisplayFavorites favorites={favorites} />  } />
             </Switch>
-            
         </>
     )
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        favorites: state.favorites
+    }
+}
+
+export default connect(mapStateToProps)(App)

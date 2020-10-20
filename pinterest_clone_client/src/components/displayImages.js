@@ -4,12 +4,18 @@ import { addFavorites } from '../actions/favoritesActions';
 
 
 
- const DisplayImages = ({favorites, imgSrc, setImgSrc, pinsData}) => {
+ const DisplayImages = ({ addFavorites, favorites, imgSrc, setImgSrc, pinsData}) => {
 //    debugger;
+  
+
     const handleClick = (e) => {
-        setImgSrc([...favorites, e.target.src])
-        {addFavorites(favorites)}
-        alert('You saved your pin!')
+        const source = e.target.src
+
+        setImgSrc([...imgSrc, source])
+        addFavorites(source)
+        
+        // alert(e.target.src)
+        
     }
 
     return pinsData.map(data => (                                                   
