@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 // import DisplayFavorites from './DisplayFavorites';
@@ -20,7 +20,6 @@ const App = () => {
                 <Route exact path='/about-dev' component={DevAbout} />
                 {/* <Route exact path='/pins' render= {() => < DisplayFavorites favorite={favorite} setFavorite={setFavorite} />} /> */}
             </Switch>
-            
         </>
     )
 }
