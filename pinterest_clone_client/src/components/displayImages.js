@@ -3,7 +3,7 @@ import React from 'react';
 
 
  const DisplayImages = ({favorite, setFavorite, pinsData}) => {
-//    debugger;
+
     const handleClick = (e) => {
         setFavorite([...favorite, e.target.src])
         alert('You saved your pin!')
