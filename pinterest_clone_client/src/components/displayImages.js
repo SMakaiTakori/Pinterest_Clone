@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
+import { connect } from 'react-redux';
 
 
 
  const DisplayImages = ({favorite, setFavorite, pinsData}) => {
 
     const handleClick = (e) => {
-        setFavorite([...favorite, e.target.src])
-        alert('You saved your pin!')
+        const source = e.target.src
+
+        setImgSrc([...imgSrc, source])
+        addFavorites(source)
+        fetchFavorites(favorites)
+        
+        alert('You saved your favorite!')
+        
     }
 
     return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
         <br/>
-      
             <img alt='' 
             src={data.previewURL} 
             onClick={ (e) => handleClick(e) }
@@ -32,4 +39,4 @@ import React from 'react';
 }
 
 
-export default DisplayImages;
+export default connect(null, {addFavorites, fetchFavorites})(DisplayImages) ;

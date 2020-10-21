@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux'
 import { categoriesReducer } from './categoriesReducer'
 import { pinsReducer } from './pinsReducer'
+import { favoritesReducer } from './favoritesReducer'
 
 export const rootReducer = combineReducers({
     pins: pinsReducer,
-    categories: categoriesReducer
+    categories: categoriesReducer,
+    favorites: favoritesReducer
 })
 

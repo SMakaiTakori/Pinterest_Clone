@@ -15,7 +15,7 @@ class PinsController < ApplicationController
 
   # POST /pins
   def create
-    byebug
+  
     @pin = Pin.new(pin_params)
 
     if @pin.save
