@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const DisplayFavorites = ({ favorite }) => {
-debugger;
+// debugger;
 
 
     return (
@@ -10,7 +10,7 @@ debugger;
          
             <h1>Your Pins</h1>
           { favorite.map((fav) => (
-            <ul>
+            <ul >
             <img
             src={fav}
             alt= ""

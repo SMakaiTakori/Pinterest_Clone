@@ -11,6 +11,9 @@ export const fetchPins = (query) => {
 
 export const fetchQuery = (query) => {
     // debugger;
+    let body = {
+        pin: {query}
+    }
     return (dispatch) => {
         fetch('http://localhost:3080/pins', {
             method: "POST",
@@ -18,10 +21,9 @@ export const fetchQuery = (query) => {
                 "Content-Type": "application/json",
                 "Accept": "application/json" 
             },
-            body: JSON.stringify(query)
+            body: JSON.stringify(body)
         })
         .then(res => res.json())
-        .then(query => console.log(query) )
+        .then(queryData => dispatch({ type: 'FETCH_QUERY', queryData }))
     }
 }
-// dispatch({ type: 'FETCH_QUERY', queryData })

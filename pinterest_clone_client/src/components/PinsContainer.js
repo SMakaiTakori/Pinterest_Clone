@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { fetchPins, fetchQuery } from '../actions/pinsActions'
 
 
-const PinsContainer = ({ selected, fetchPins}) => {
+const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
 
     const [query, setQuery] = useState('');   
 
@@ -12,11 +12,12 @@ const PinsContainer = ({ selected, fetchPins}) => {
             fetchPins(selected)}
         }, [selected])
 
-    const handleSubmit = (e, query) => {
+    const handleSubmit = (e) => {
         // debugger;
         // console.log('button',query)
         e.preventDefault();
         fetchQuery(query)
+        fetchPins(query)
         
     }    
                 
@@ -32,7 +33,7 @@ const PinsContainer = ({ selected, fetchPins}) => {
            /> 
            <input type='submit' value='submit' />
            </form> 
-           <button onClick={() => fetchPins(query) }> Get Images </button> 
+           {/* <button onClick={() => fetchPins(query) }> Get Images </button>  */}
          
         </div>
         </>
