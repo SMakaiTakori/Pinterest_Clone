@@ -1,6 +1,6 @@
-import React from 'react';
-import { addFavorites } from '../actions/favoritesActions';
-
+import React, { useEffect } from 'react';
+import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
+import { connect } from 'react-redux';
 
 
 
@@ -13,6 +13,7 @@ import { addFavorites } from '../actions/favoritesActions';
 
         setImgSrc([...imgSrc, source])
         addFavorites(source)
+        fetchFavorites(favorites)
         
         alert('You saved your favorite!')
         
@@ -40,4 +41,4 @@ import { addFavorites } from '../actions/favoritesActions';
 }
 
 
-export default DisplayImages;
+export default connect(null, {addFavorites, fetchFavorites})(DisplayImages) ;
