@@ -12,7 +12,7 @@ export const fetchPins = (query) => {
 export const fetchQuery = (query) => {
     // debugger;
     return (dispatch) => {
-        fetch (`http://localhost:3080/pins`, {
+        fetch('http://localhost:3080/pins', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export const fetchQuery = (query) => {
             body: JSON.stringify(query)
         })
         .then(res => res.json())
-        .then(queryData => dispatch({ type: 'FETCH_QUERY', queryData }))
+        .then(query => console.log(query) )
     }
 }
-
+// dispatch({ type: 'FETCH_QUERY', queryData })
