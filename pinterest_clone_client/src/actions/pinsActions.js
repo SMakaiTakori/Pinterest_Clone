@@ -9,3 +9,19 @@ export const fetchPins = (query) => {
 }
 
 
+expot const fetchQuery = (query) => {
+    return (dispatch) => {
+        fetch (`http://localhost:3080/categories`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json" 
+            },
+            body: JSON.stringify(category)
+        })
+        .then(res => res.json())
+        .then(queryData => dispatch({ type: 'FETCH_QUERY', payload: queryData }))
+    }
+}
+
+// rails g migration add_query_to_pins query:string
