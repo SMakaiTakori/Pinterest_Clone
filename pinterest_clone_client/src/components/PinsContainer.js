@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
-import { fetchPins } from '../actions/pinsActions'
+import { fetchPins, fetchQuery } from '../actions/pinsActions'
 
 
 const PinsContainer = ({ selected, fetchPins}) => {
@@ -11,17 +11,22 @@ const PinsContainer = ({ selected, fetchPins}) => {
         if (selected) {
             fetchPins(selected)}
         }, [selected])
+
+    const handleClick = (query) => {
+        fetchPins(query)
+        fetchQuery(query)
+    }    
                 
     return(                   
         <>
-        <div>                
+        <div>              
            <input 
                 type='text' 
                 onChange= {(e) => setQuery(e.target.value)}
                 value={query}
                 placeholder='Search'
            /> 
-           <button onClick={() => fetchPins(query)}> Get Images </button>  
+           <button onClick={() => {handleClick(query)} }> Get Images </button> 
         </div>
         </>
     )
@@ -33,4 +38,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchPins })(PinsContainer);
+export default connect(mapStateToProps, { fetchPins, fetchQuery })(PinsContainer);
