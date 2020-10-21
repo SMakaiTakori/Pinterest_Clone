@@ -16,9 +16,10 @@ const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
         // debugger;
         // console.log('button',query)
         e.preventDefault();
+        console.log('a')
         fetchQuery(query)
-        fetchPins(query)
-        
+        console.log('g')
+        fetchPins(query)       
     }    
                 
     return(                   

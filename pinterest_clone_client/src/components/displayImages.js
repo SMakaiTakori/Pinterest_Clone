@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 
 
- const DisplayImages = ({favorite, setFavorite, pinsData}) => {
+ const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData}) => {
 
     const handleClick = (e) => {
         const source = e.target.src
 
         setImgSrc([...imgSrc, source])
         addFavorites(source)
-        fetchFavorites(favorites)
+        // fetchFavorites(favorites)
         
         alert('You saved your favorite!')
         
