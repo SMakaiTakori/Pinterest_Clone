@@ -10,11 +10,8 @@ import { connect } from 'react-redux';
         const source = e.target.src
 
         setImgSrc([...imgSrc, source])
-        addFavorites(source)
-        // fetchFavorites(favorites)
-        
-        alert('You saved your favorite!')
-        
+        addFavorites(source);        
+        alert('You saved your favorite!');        
     }
 
     return pinsData.map(data => (                                                   

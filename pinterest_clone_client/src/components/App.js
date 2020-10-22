@@ -16,9 +16,8 @@ const App = ({ favorites }) => {
             <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/about-app' component={AboutPage} />
-                {/* <Route exact path='/about-dev' component={DevAbout} />               */}
                 <Route exact path='/pins' render={() => <DisplayFavorites favorites={favorites} />  } />
+                <Route exact path='/about-app' component={AboutPage} />           
             </Switch>
         </>
     )

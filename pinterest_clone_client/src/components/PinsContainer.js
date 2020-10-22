@@ -12,30 +12,25 @@ const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
             fetchPins(selected)}
         }, [selected])
 
-    const handleSubmit = (e) => {
-        // debugger;
-        // console.log('button',query)
+    const handleSearch= (e) => {
+    
         e.preventDefault();
-        console.log('a')
-        fetchQuery(query)
-        console.log('g')
-        fetchPins(query)       
+        // console.log('a') //
+        fetchQuery(query);
+        // console.log('g') //
+        fetchPins(query);       
     }    
                 
     return(                   
         <>
-        <div>  
-            <form onSubmit={ (e) => handleSubmit(e)} >           
+        <div>                
            <input 
                 type='text' 
                 onChange= {(e) => setQuery(e.target.value)}
                 value={query}
                 placeholder='Search'
            /> 
-           <input type='submit' value='submit' />
-           </form> 
-           {/* <button onClick={() => fetchPins(query) }> Get Images </button>  */}
-         
+           <button onClick={(e) => handleSearch(e) }> Search </button>          
         </div>
         </>
     )

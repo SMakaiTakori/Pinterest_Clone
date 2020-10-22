@@ -12,8 +12,7 @@ const NavBar = () => {
             <h1 style= {{ color: '#E60023'}}> 
                 Clone        
                 <li><NavLink exact to= '/pins'> My Pins  </NavLink></li>
-                <li><NavLink exact to= '/about-dev'> About the Developer </NavLink></li>
-                <li><NavLink exact to= '/about-app'> App Description  </NavLink></li>
+                <li><NavLink exact to= '/about-app'> About </NavLink></li>
                 <li><NavLink exact to= '/'> Home  </NavLink></li>      
             </h1>
             </ul>
