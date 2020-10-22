@@ -14,22 +14,22 @@ export const SearchDisplay = ({ fetchPins, fetchQueries, queries }) => {
 
     // console.log('qu', props)
     
+    const qArray = queries.slice(1).slice(-5)
+    
+
 
     return (
-        
         <>
-       
          <h3> Search History : </h3>
-        { queries.map((q) => (      
+        { qArray.map((q) => (  
+              
         <button
         value={q.query}
         onClick={ (e) => fetchPins(e.target.value) }
-        cssClass='e-link' 
         > 
             {q.query}
         </button>
         ))} 
-
         </>
     )
 }

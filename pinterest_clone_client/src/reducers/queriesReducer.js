@@ -3,7 +3,7 @@ export const queriesReducer = (state = [], action) => {
         case 'FETCH_QUERIES':
             return action.queries
         case 'POST_QUERY':
-            return action.queryData 
+            return [...state, action.queryData] 
         default:
                 return state
     }

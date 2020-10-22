@@ -9,16 +9,16 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
     const [query, setQuery] = useState('');   
 
     useEffect(() => {
-        // fetchQueries(); 
+     
         if (selected) {
             fetchPins(selected)}
         }, [selected])
 
     const handleSearch= (e) => {    
         e.preventDefault();
-        // console.log('a') //
+        // console.log('a') 
         postQuery(query)
-        // console.log('g') //
+        // console.log('g') 
         fetchPins(query)       
     }    
    
@@ -31,8 +31,7 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
                 value={query}
                 placeholder='Search'
            /> 
-           <button onClick={(e) => handleSearch(e) }> Search </button> 
-                  
+           <button onClick={(e) => handleSearch(e) }> Search </button>    
         </div>
         </>
     )

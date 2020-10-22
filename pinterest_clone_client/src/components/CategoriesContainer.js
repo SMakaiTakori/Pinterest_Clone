@@ -17,6 +17,7 @@ const CategoriesContainer = ({ fetchQueries, fetchPins, fetchCategories, catData
 
 
     useEffect(() => {
+
         fetchQueries(); 
         fetchCategories();
             if (selected) {
@@ -26,7 +27,8 @@ const CategoriesContainer = ({ fetchQueries, fetchPins, fetchCategories, catData
     return(
         <div>
 
-           <SearchDisplay fetchQueries={fetchQueries} />  
+           <SearchDisplay fetchQueries={fetchQueries} /> 
+          
            < DisplayCategories 
            selected={selected} 
            setSelected={setSelected} 
