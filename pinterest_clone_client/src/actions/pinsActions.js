@@ -14,13 +14,13 @@ export const fetchPins = (query) => {
 }
 
 export const fetchQuery = (query) => {
-    // debugger;
+
     let body = {
         pin: {query}
     }
     console.log('b')
     return (dispatch) => {
-        console.log('c')
+        // console.log('c') //
         fetch('http://localhost:3080/pins', {
             method: "POST",
             headers: {
@@ -31,10 +31,10 @@ export const fetchQuery = (query) => {
         })
         .then(res => res.json())
         .then(queryData => {
-            console.log('d')
+            // console.log('d') //
             return dispatch({ type: 'FETCH_QUERY', queryData })
         })
-        console.log('e')
+        // console.log('e') // 
     }
     console.log('f')
 }
