@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import SearchDisplay from './SearchDisplay'
 import { connect } from 'react-redux'
-import { fetchPins, fetchQuery } from '../actions/pinsActions'
+import { fetchPins  } from '../actions/pinsActions'
+import { fetchQueries, postQuery } from '../actions/queriesActions'
 
-
-const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
+const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
 
     const [query, setQuery] = useState('');   
 
     useEffect(() => {
+        // fetchQueries(); 
         if (selected) {
             fetchPins(selected)}
         }, [selected])
@@ -16,11 +17,11 @@ const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
     const handleSearch= (e) => {    
         e.preventDefault();
         // console.log('a') //
-        fetchQuery(query);
+        postQuery(query)
         // console.log('g') //
-        fetchPins(query);       
+        fetchPins(query)       
     }    
-                
+   
     return(                   
         <>
         <div>                
@@ -31,16 +32,12 @@ const PinsContainer = ({ selected, fetchPins, fetchQuery}) => {
                 placeholder='Search'
            /> 
            <button onClick={(e) => handleSearch(e) }> Search </button> 
-           <SearchDisplay fetchPins={fetchPins} />         
+                  
         </div>
         </>
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        pinsData: state.pins
-    }
-}
 
-export default connect(mapStateToProps, { fetchPins, fetchQuery })(PinsContainer);
+
+export default connect(null, { fetchPins, postQuery, fetchQueries })(PinsContainer);

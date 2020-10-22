@@ -13,28 +13,3 @@ export const fetchPins = (query) => {
     }
 }
 
-export const fetchQuery = (query) => {
-
-    let body = {
-        pin: {query}
-    }
-    console.log('b')
-    return (dispatch) => {
-        // console.log('c') //
-        fetch('http://localhost:3080/pins', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json" 
-            },
-            body: JSON.stringify(body)
-        })
-        .then(res => res.json())
-        .then(queryData => {
-            // console.log('d') //
-            return dispatch({ type: 'FETCH_QUERY', queryData })
-        })
-        // console.log('e') // 
-    }
-    console.log('f')
-}

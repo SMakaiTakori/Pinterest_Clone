@@ -2,20 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import DisplayCategories from './DisplayCategories'
 import DisplayImages from './DisplayImages'
-import DisplayFavorites from './DisplayFavorites'
+import SearchDisplay from './SearchDisplay'
 
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categoriesActions'
 import { fetchPins } from '../actions/pinsActions'
 import { addFavorites  } from '../actions/favoritesActions'
+import { fetchQueries } from '../actions/queriesActions'
 
 
-const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorites, addFavorites}) => {
+const CategoriesContainer = ({ fetchQueries, fetchPins, fetchCategories, catData, selected, setSelected, pinsData, favorites, addFavorites}) => {
 
     const [imgSrc, setImgSrc] = useState([]); 
 
 
     useEffect(() => {
+        fetchQueries(); 
         fetchCategories();
             if (selected) {
             fetchPins(selected)}
@@ -23,8 +25,8 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
 
     return(
         <div>
-           {/* { favorites.length ? < DisplayFavorites favorites={favorites}  /> : null } */}
-       
+
+           <SearchDisplay fetchQueries={fetchQueries} />  
            < DisplayCategories 
            selected={selected} 
            setSelected={setSelected} 
@@ -38,9 +40,8 @@ const CategoriesContainer = ({ fetchPins, fetchCategories, catData, selected, se
 const mapStateToProps = state => { 
     return {
         catData: state.categories,
-        pinsData: state.pins,
-     
+        pinsData: state.pins     
     }
 }
 
-export default connect(mapStateToProps, { fetchCategories, fetchPins, addFavorites })(CategoriesContainer);
+export default connect(mapStateToProps, { fetchCategories, fetchPins, addFavorites, fetchQueries })(CategoriesContainer);
