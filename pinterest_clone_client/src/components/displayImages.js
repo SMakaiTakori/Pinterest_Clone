@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
 import { connect } from 'react-redux';
 
@@ -23,9 +24,7 @@ import { connect } from 'react-redux';
             onClick={ (e) => handleClick(e) }
             />
                 
-        <span>
-            <br/>                 
-            Likes: {data.favorites} 
+        <span> 
             <br/>    
             Photo Credit: {data.user}
         </span>

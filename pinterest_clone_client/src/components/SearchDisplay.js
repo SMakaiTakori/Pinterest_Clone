@@ -1,12 +1,12 @@
 import React from 'react'
+
 import { connect } from 'react-redux'
 import { fetchQueries } from '../actions/queriesActions'
 import { fetchPins } from '../actions/pinsActions'
-import DisplayImages from './DisplayImages'
 
 
 
-export const SearchDisplay = ({ fetchPins, fetchQueries, queries }) => {
+export const SearchDisplay = ({ fetchPins, queries }) => {
         
     const qArray = queries.slice(1).slice(-5)
 
@@ -14,12 +14,15 @@ export const SearchDisplay = ({ fetchPins, fetchQueries, queries }) => {
         <>
          <h3> Search History : </h3>
         { qArray.map((q) => (              
-        <button
+        
+        
+        <a
         value={q.query}
         onClick={ (e) => fetchPins(e.target.value) }
+        style= {{ cursor: 'pointer', marginRight: '10px', color:'#E60023', textDecoration: 'underline'}}
         > 
             {q.query}
-        </button>
+        </a>
         ))} 
         </>
     )

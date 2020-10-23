@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import { connect } from 'react-redux'
 import { fetchPins  } from '../actions/pinsActions'
-import { fetchQueries, postQuery } from '../actions/queriesActions'
+import { postQuery } from '../actions/queriesActions'
 
-const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
+const PinsContainer = ({ selected, fetchPins, postQuery }) => {
 
     const [query, setQuery] = useState('');   
 
@@ -15,7 +15,7 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
 
     const handleSearch= (e) => {    
         e.preventDefault();
-        console.log('a') 
+        console.log('a')
         postQuery(query)
         console.log('g') 
         fetchPins(query)       
@@ -37,5 +37,4 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
 }
 
 
-
-export default connect(null, { fetchPins, postQuery, fetchQueries })(PinsContainer);
+export default connect(null, { fetchPins, postQuery })(PinsContainer);
