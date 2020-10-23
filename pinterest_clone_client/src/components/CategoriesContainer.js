@@ -26,14 +26,12 @@ const CategoriesContainer = ({ fetchQueries, fetchPins, fetchCategories, catData
 
     return(
         <div>
-
-           <SearchDisplay fetchQueries={fetchQueries} /> 
-          
            < DisplayCategories 
            selected={selected} 
            setSelected={setSelected} 
            catData={catData}
            />
+           <SearchDisplay fetchQueries={fetchQueries} /> 
            < DisplayImages addFavorites={addFavorites} pinsData={pinsData} favorites={favorites} imgSrc={imgSrc} setImgSrc={setImgSrc}   />
         </div>
     )

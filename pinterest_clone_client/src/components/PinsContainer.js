@@ -9,7 +9,6 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
     const [query, setQuery] = useState('');   
 
     useEffect(() => {
-     
         if (selected) {
             fetchPins(selected)}
         }, [selected])
