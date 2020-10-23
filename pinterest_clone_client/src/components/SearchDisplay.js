@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { fetchQueries } from '../actions/queriesActions'
 import { fetchPins } from '../actions/pinsActions'

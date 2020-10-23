@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SearchDisplay from './SearchDisplay'
+
 import { connect } from 'react-redux'
 import { fetchPins  } from '../actions/pinsActions'
 import { fetchQueries, postQuery } from '../actions/queriesActions'
@@ -15,9 +15,9 @@ const PinsContainer = ({ selected, fetchPins, fetchQueries, postQuery }) => {
 
     const handleSearch= (e) => {    
         e.preventDefault();
-        // console.log('a') 
+        console.log('a') 
         postQuery(query)
-        // console.log('g') 
+        console.log('g') 
         fetchPins(query)       
     }    
    

@@ -1,4 +1,3 @@
-import { favoritesReducer } from "../reducers/favoritesReducer"
 
 
 export const addFavorites = (favorites) => {

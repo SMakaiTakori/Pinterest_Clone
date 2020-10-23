@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
 import { connect } from 'react-redux';
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom'
+
 import DisplayCategories from './DisplayCategories'
 import DisplayImages from './DisplayImages'
 import SearchDisplay from './SearchDisplay'

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 import DisplayFavorites from './DisplayFavorites';
 import AboutPage from './AboutPage';
-import DevAbout from './DevAbout'
 import Home from './Home'
 import NavBar from './NavBar'
 
