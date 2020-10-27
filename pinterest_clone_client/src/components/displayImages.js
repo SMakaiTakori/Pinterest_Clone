@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
 import { connect } from 'react-redux';
+import  LikeButton  from './LikeButton';
 
 
 
@@ -15,6 +16,7 @@ import { connect } from 'react-redux';
         alert('You saved your favorite!');        
     }
 
+
     return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
@@ -25,6 +27,8 @@ import { connect } from 'react-redux';
             />
                 
         <span> 
+            <br/>
+            Like :  <LikeButton /> 
             <br/>    
             Photo Credit: {data.user}
         </span>

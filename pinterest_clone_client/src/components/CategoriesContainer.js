@@ -32,7 +32,7 @@ const CategoriesContainer = ({ fetchQueries, fetchPins, fetchCategories, catData
            catData={catData}
            />
            <SearchDisplay fetchQueries={fetchQueries} /> 
-           < DisplayImages addFavorites={addFavorites} pinsData={pinsData} favorites={favorites} imgSrc={imgSrc} setImgSrc={setImgSrc}   />
+           <DisplayImages addFavorites={addFavorites} pinsData={pinsData} favorites={favorites} imgSrc={imgSrc} setImgSrc={setImgSrc}   />
         </div>
     )
 }
