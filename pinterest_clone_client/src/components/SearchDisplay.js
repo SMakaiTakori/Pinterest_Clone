@@ -16,7 +16,6 @@ export const SearchDisplay = ({ fetchPins, queries }) => {
          <h3> Search History : </h3>
         { qArray.map((q) => (              
         <a
-        value={q.query}
         onClick={ () => fetchPins(q.query) }
         style= {{ cursor: 'pointer', marginRight: '10px', color:'#E60023', textDecoration: 'underline'}}
         > 
