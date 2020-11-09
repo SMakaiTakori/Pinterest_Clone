@@ -3,7 +3,7 @@ import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
 import { connect } from 'react-redux';
 
 
-const LikeButton = ({source, handleClick, addFavorites, imgSrc, setImgSrc}) => {
+const LikeButton = ({source, addFavorites, imgSrc, setImgSrc }) => {
 
     const [like, setLike] = useState('\u2606');
 
@@ -15,28 +15,29 @@ const LikeButton = ({source, handleClick, addFavorites, imgSrc, setImgSrc}) => {
 
     // }
 
-    const likeClick = () => { 
+    const likeClick = (source) => { 
+
+        // handleClick() 
+              
         if (like === '\u2606')
             setLike('\u2605' )
+          
         else 
             setLike('\u2606')
     }
 
     // How to grab source from DisplayImages????
 
-
-    const handleLikeClick = (addFavorites, imgSrc, setImgSrc, source) => {
+    const handleClick = () => {
         setImgSrc([...imgSrc, source])
-        addFavorites(source)
-        likeClick()
-        alert("favorited")
-        console.log(imgSrc)
+        addFavorites(source);   
+        console.log(source)
     }
 
 
     return (  
             <label
-             onClick= {() => handleLikeClick(source)}  
+             onClick= {() => handleClick() }  
             >
                 {like}              
         
