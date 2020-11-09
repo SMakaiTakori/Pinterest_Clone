@@ -8,32 +8,17 @@ import  LikeButton  from './LikeButton';
 
  const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData}) => {
 
-    const handleClick = (e) => {
-        const source = e.target.src
-
-        setImgSrc([...imgSrc, source])
-        addFavorites(source);        
-        alert('You saved your favorite!');   
-        console.log('display images ', source)     
-    }
-
-
     return pinsData.map(data => (                                                   
         <div key={data.id}>
         <br/>   
         <br/>
             <img alt='' 
             src={data.previewURL} 
-            onClick={ (e) => handleClick(e) }
             />
                 
         <span> 
             <br/>
-
-
-            Like : <LikeButton source={data.previewURL} handleClick={handleClick} imgSrc={imgSrc} setImgSrc={setImgSrc} /> 
-           
-            
+            Like : <LikeButton source={data.previewURL} imgSrc={imgSrc} setImgSrc={setImgSrc} />     
             <br/>    
             Photo Credit: {data.user}
         </span>
