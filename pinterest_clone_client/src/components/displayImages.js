@@ -28,7 +28,7 @@ import  LikeButton  from './LikeButton';
                 
         <span> 
             <br/>
-            Like :  <LikeButton /> 
+            Like : <LikeButton addFavorites={addFavorites} imgSrc={imgSrc} /> 
             <br/>    
             Photo Credit: {data.user}
         </span>
