@@ -13,7 +13,8 @@ import  LikeButton  from './LikeButton';
 
         setImgSrc([...imgSrc, source])
         addFavorites(source);        
-        alert('You saved your favorite!');        
+        alert('You saved your favorite!');   
+        console.log('display images ', source)     
     }
 
 
@@ -28,7 +29,7 @@ import  LikeButton  from './LikeButton';
                 
         <span> 
             <br/>
-            Like : <LikeButton addFavorites={addFavorites} imgSrc={imgSrc} /> 
+            Like : <LikeButton handleClick={handleClick}  addFavorites={addFavorites} imgSrc={imgSrc} setImgSrc={setImgSrc} /> 
             <br/>    
             Photo Credit: {data.user}
         </span>
