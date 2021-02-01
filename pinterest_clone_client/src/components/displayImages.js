@@ -11,9 +11,8 @@ const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData }) => {
     <div key={data.id}>
       <br />
       <br />
-      <Card style={{ width: "15rem" }}>
+      <Card style={{ width: "16em" }}>
         <Card.Img alt="" src={data.previewURL} />
-
         <Card.Body>
           <Card.Text>
             Like :{" "}

@@ -38,7 +38,9 @@ const CategoriesContainer = ({
         setSelected={setSelected}
         catData={catData}
       />
+      <br />
       <SearchDisplay fetchQueries={fetchQueries} />
+      <br />
       <DisplayImages
         addFavorites={addFavorites}
         pinsData={pinsData}

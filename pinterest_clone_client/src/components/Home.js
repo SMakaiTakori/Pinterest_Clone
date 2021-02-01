@@ -17,6 +17,7 @@ const Home = ({ favorites }) => {
         {" "}
         Need suggestions? Select a popular category below to get started!{" "}
       </h4>
+      <br />
       <CategoriesContainer
         favorites={favorites}
         selected={selected}

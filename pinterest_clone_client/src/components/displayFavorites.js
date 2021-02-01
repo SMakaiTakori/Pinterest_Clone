@@ -1,6 +1,7 @@
 import React from "react";
 
 import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 
 const DisplayFavorites = ({ favorites }) => {
   return (
@@ -9,9 +10,16 @@ const DisplayFavorites = ({ favorites }) => {
         <h1>Your Pins</h1>
         <br />
         {favorites.map((fav) => (
-          <ul>
-            <img src={fav} alt="" />
-          </ul>
+          // <Card style={{ width: "16em" }}>
+          <Card.Img
+            src={fav}
+            alt=""
+            style={{
+              width: "16em",
+              margin: "2em",
+            }}
+          />
+          // </Card>
         ))}
       </Container>
     </div>
