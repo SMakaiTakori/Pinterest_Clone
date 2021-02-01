@@ -9,7 +9,7 @@ const Home = ({ favorites }) => {
   const [selected, setSelected] = useState("");
 
   return (
-    <div>
+    <div className="margin-container">
       <h1>Find your Pinspiration!</h1>
       <PinsContainer favorites={favorites} selected={selected} />
       <br />
