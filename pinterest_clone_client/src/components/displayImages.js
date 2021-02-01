@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { addFavorites, fetchFavorites } from '../actions/favoritesActions';
-import { connect } from 'react-redux';
-import  LikeButton  from './LikeButton';
+import { addFavorites, fetchFavorites } from "../actions/favoritesActions";
+import { connect } from "react-redux";
+import LikeButton from "./LikeButton";
 
+import Card from "react-bootstrap/Card";
 
+const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData }) => {
+  return pinsData.map((data) => (
+    <div key={data.id}>
+      <br />
+      <br />
+      <Card style={{ width: "15rem" }}>
+        <Card.Img alt="" src={data.previewURL} />
 
- const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData}) => {
-
-    return pinsData.map(data => (                                                   
-        <div key={data.id}>
-        <br/>   
-        <br/>
-            <img alt='' 
-            src={data.previewURL} 
+        <Card.Body>
+          <Card.Text>
+            Like :{" "}
+            <LikeButton
+              source={data.previewURL}
+              imgSrc={imgSrc}
+              setImgSrc={setImgSrc}
             />
-                
-        <span> 
-            <br/>
-            Like : <LikeButton source={data.previewURL} imgSrc={imgSrc} setImgSrc={setImgSrc} />     
-            <br/>    
+            <br />
             Photo Credit: {data.user}
-        </span>
-        
-        </div>   
-        
-    ))
-}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  ));
+};
 
-
-export default connect(null, {addFavorites, fetchFavorites})(DisplayImages) ;
+export default connect(null, { addFavorites, fetchFavorites })(DisplayImages);
