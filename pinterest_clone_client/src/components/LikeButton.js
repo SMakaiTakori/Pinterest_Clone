@@ -17,8 +17,6 @@ const LikeButton = ({ source, addFavorites, imgSrc, setImgSrc }) => {
     else setLike("\u2606");
   };
 
-  // How to grab source from DisplayImages????
-
   const handleClick = () => {
     likeClick();
     setImgSrc([...imgSrc, source]);
