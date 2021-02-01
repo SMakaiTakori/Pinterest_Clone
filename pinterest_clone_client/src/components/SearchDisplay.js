@@ -9,7 +9,7 @@ export const SearchDisplay = ({ fetchPins, queries }) => {
 
   return (
     <>
-      <h3> Search History : </h3>
+      <h3 className="center"> Search History : </h3>
       {qArray.map((q) => (
         <a
           onClick={() => fetchPins(q.query)}

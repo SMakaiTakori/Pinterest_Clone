@@ -10,7 +10,7 @@ const Home = ({ favorites }) => {
 
   return (
     <div className="margin-container">
-      <h1>Find your Pinspiration!</h1>
+      <h1 className="center">Find your Pinspiration!</h1>
       <PinsContainer favorites={favorites} selected={selected} />
       <br />
       <h4 style={{ color: "#E60023", paddingTop: "25px" }}>

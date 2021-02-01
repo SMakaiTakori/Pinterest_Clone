@@ -30,3 +30,11 @@ body {
   margin-left: 10px;
   margin-right: auto;
 }
+
+.center {
+  text-align: center;
+}
+
+.like-button {
+  color: #e60023;
+}

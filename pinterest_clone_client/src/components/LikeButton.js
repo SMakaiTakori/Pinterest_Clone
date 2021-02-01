@@ -22,10 +22,17 @@ const LikeButton = ({ source, addFavorites, imgSrc, setImgSrc }) => {
     setImgSrc([...imgSrc, source]);
     addFavorites(source);
 
-    // alert('You saved your favorite!');
+    // alert("You saved your favorite!");
   };
 
-  return <label onClick={() => handleClick()}>{like}</label>;
+  return (
+    <label
+      className={like === "\u2605" ? "like-button" : "null"}
+      onClick={() => handleClick()}
+    >
+      {like}
+    </label>
+  );
 };
 
 export default connect(null, { addFavorites, fetchFavorites })(LikeButton);

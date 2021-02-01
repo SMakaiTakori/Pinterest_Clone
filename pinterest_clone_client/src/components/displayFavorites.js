@@ -10,7 +10,6 @@ const DisplayFavorites = ({ favorites }) => {
         <h1>Your Pins</h1>
         <br />
         {favorites.map((fav) => (
-          // <Card style={{ width: "16em" }}>
           <Card.Img
             src={fav}
             alt=""
@@ -19,7 +18,6 @@ const DisplayFavorites = ({ favorites }) => {
               margin: "2em",
             }}
           />
-          // </Card>
         ))}
       </Container>
     </div>
