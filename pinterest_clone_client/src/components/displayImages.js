@@ -5,15 +5,15 @@ import { connect } from "react-redux";
 import LikeButton from "./LikeButton";
 
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/esm/Container";
 
 const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData }) => {
-  return pinsData.map((data) => (
-    <div key={data.id}>
-      <br />
-      <br />
-      <Card style={{ width: "16em" }}>
-        <Card.Img alt="" src={data.previewURL} />
-        <Card.Body>
+  return (
+    <Container>
+      {pinsData.map((data) => (
+        <div style={{ display: "inline-grid", margin: "2em" }}>
+          <Card.Img alt="" src={data.previewURL} style={{ width: "16em" }} />
+          <br />
           <Card.Text>
             Like :{" "}
             <LikeButton
@@ -24,10 +24,10 @@ const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData }) => {
             <br />
             Photo Credit: {data.user}
           </Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
-  ));
+        </div>
+      ))}
+    </Container>
+  );
 };
 
 export default connect(null, { addFavorites, fetchFavorites })(DisplayImages);
