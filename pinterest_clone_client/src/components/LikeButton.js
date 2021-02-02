@@ -20,7 +20,7 @@ const LikeButton = ({ source, addFavorites, imgSrc, setImgSrc }) => {
 
   return (
     <label
-      className={like === "\u2605" ? "like-button" : "null"}
+      className={like === "\u2605" ? "like-button" : ""}
       onClick={() => handleClick()}
     >
       {like}
