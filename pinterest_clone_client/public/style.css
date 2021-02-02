@@ -26,6 +26,11 @@ body {
   border-right: 1px solid #ccc;
 }
 
+.search-bar {
+  /* border-radius: 50%; */
+  width: 30em;
+}
+
 .margin-container {
   margin-left: 10px;
   margin-right: auto;
@@ -33,6 +38,15 @@ body {
 
 .center {
   text-align: center;
+}
+
+/* .categories {
+  margin-left: 40% !important;
+} */
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .like-button {

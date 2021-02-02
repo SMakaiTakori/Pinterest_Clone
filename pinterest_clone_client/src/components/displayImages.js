@@ -11,7 +11,7 @@ const DisplayImages = ({ addFavorites, imgSrc, setImgSrc, pinsData }) => {
   return (
     <Container>
       {pinsData.map((data) => (
-        <div key={data.id} style={{ display: "inline-grid", margin: "2em" }}>
+        <div style={{ display: "inline-grid", margin: "2em" }}>
           <Card.Img alt="" src={data.previewURL} style={{ width: "16em" }} />
           <br />
           <Card.Text>

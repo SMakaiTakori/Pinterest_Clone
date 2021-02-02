@@ -5,14 +5,7 @@ import { connect } from "react-redux";
 const LikeButton = ({ source, addFavorites, imgSrc, setImgSrc }) => {
   const [like, setLike] = useState("\u2606");
 
-  // const addLike = (setImgSrc) => {
-  //     if (like === '\u2605')
-  //     addFavorites(imgSrc)
-  //     console.log(setImgSrc)
-
-  // }
-
-  const likeClick = (source) => {
+  const likeClick = () => {
     if (like === "\u2606") setLike("\u2605");
     else setLike("\u2606");
   };

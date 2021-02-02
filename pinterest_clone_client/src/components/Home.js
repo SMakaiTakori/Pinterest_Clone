@@ -9,11 +9,12 @@ const Home = ({ favorites }) => {
   const [selected, setSelected] = useState("");
 
   return (
-    <div className="margin-container">
+    <div>
       <h1 className="center">Find your Pinspiration!</h1>
+      <br />
       <PinsContainer favorites={favorites} selected={selected} />
       <br />
-      <h4 style={{ color: "#E60023", paddingTop: "25px" }}>
+      <h4 style={{ textAlign: "center", color: "#E60023", paddingTop: "25px" }}>
         {" "}
         Need suggestions? Select a popular category below to get started!{" "}
       </h4>

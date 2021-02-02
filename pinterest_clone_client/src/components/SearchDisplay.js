@@ -8,8 +8,8 @@ export const SearchDisplay = ({ fetchPins, queries }) => {
   const qArray = queries.slice(1).slice(-5);
 
   return (
-    <>
-      <h3 className="center"> Search History : </h3>
+    <div className="center">
+      <h5> Search History : </h5>
       {qArray.map((q) => (
         <a
           onClick={() => fetchPins(q.query)}
@@ -23,7 +23,7 @@ export const SearchDisplay = ({ fetchPins, queries }) => {
           {q.query}
         </a>
       ))}
-    </>
+    </div>
   );
 };
 
